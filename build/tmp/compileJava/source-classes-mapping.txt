@@ -1,2 +1,4 @@
+br/eti/inovareti/tictactoe/core/Game.java
+ br.eti.inovareti.tictactoe.core.Game
 br/eti/inovareti/tictactoe/TicTacToe.java
  br.eti.inovareti.tictactoe.TicTacToe
