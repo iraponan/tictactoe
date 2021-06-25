@@ -9,7 +9,7 @@ public class UI {
     }
 
     public static void printTextWithNoNewLine(String text) {
-        System.out.print(text);
+        System.out.print(" " + text);
     }
 
     public static void printNewLine() {

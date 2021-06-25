@@ -24,12 +24,12 @@ public class Board {
             for (int j = 0; j < matrix[i].length; j++) {
                 UI.printTextWithNoNewLine(String.valueOf(matrix[i][j]));
                 if (j < matrix[i].length - 1) {
-                    UI.printTextWithNoNewLine("    |");
+                    UI.printTextWithNoNewLine("|");
                 }
             }
             UI.printNewLine();
             if (i < matrix.length - 1) {
-                UI.printText("-----------------");
+                UI.printText("-----------");
             }
         }
     }
