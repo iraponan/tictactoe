@@ -4,7 +4,7 @@ import br.eti.inovareti.tictactoe.Constantes;
 import br.eti.inovareti.tictactoe.ui.UI;
 
 public class Board {
-    public char[][] matrix;
+    private char[][] matrix;
 
     public Board() {
         matrix = new char[Constantes.BOARD_SIZE][Constantes.BOARD_SIZE];
@@ -46,10 +46,10 @@ public class Board {
     }
 
     public boolean play(Player player, Move move){
-        int i = move.i;
-        int j = move.j;
+        int i = move.getI();
+        int j = move.getJ();
 
-        matrix[i][j] = player.symbol;
+        matrix[i][j] = player.getSymbol();
 
         //TODO Checar se o jogador ganhou.
         return false;

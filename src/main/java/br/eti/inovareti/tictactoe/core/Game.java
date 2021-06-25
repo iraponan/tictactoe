@@ -5,8 +5,8 @@ import br.eti.inovareti.tictactoe.ui.UI;
 
 public class Game {
 
-    public Board board = new Board();
-    public Player[] players = new Player[Constantes.SYMBOL_PLAYERS.length];
+    private Board board = new Board();
+    private Player[] players = new Player[Constantes.SYMBOL_PLAYERS.length];
 
     public void play() {
         UI.printGameTitle();
