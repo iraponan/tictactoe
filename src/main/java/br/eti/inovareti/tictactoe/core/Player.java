@@ -1,10 +1,18 @@
 package br.eti.inovareti.tictactoe.core;
 
+import br.eti.inovareti.tictactoe.ui.UI;
+
 public class Player {
 
     private String name;
     private Board board;
     private char symbol;
+
+    public Player(String name, Board board, char symbol) {
+        this.name = name;
+        this.board = board;
+        this.symbol = symbol;
+    }
 
     public String getName() {
         return name;
@@ -30,11 +38,13 @@ public class Player {
         this.symbol = symbol;
     }
 
-    public Move inputMove() {
-        return null;
+    private Move inputMove() {
+        String moveStr = UI.readInput("Jogador: '" + name + "' => ");
+        return new Move(moveStr);
     }
 
     public void play() {
-
+        Move move = inputMove();
+        board.play(this, move);
     }
 }
