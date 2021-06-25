@@ -2,6 +2,8 @@ br/eti/inovareti/tictactoe/ui/UI.java
  br.eti.inovareti.tictactoe.ui.UI
 br/eti/inovareti/tictactoe/Constantes.java
  br.eti.inovareti.tictactoe.Constantes
+br/eti/inovareti/tictactoe/TicTacToe.java
+ br.eti.inovareti.tictactoe.TicTacToe
 br/eti/inovareti/tictactoe/core/Game.java
  br.eti.inovareti.tictactoe.core.Game
 br/eti/inovareti/tictactoe/core/Player.java
@@ -10,5 +12,3 @@ br/eti/inovareti/tictactoe/core/Board.java
  br.eti.inovareti.tictactoe.core.Board
 br/eti/inovareti/tictactoe/core/Move.java
  br.eti.inovareti.tictactoe.core.Move
-br/eti/inovareti/tictactoe/TicTacToe.java
- br.eti.inovareti.tictactoe.TicTacToe
