@@ -5,12 +5,15 @@ public class Move {
     private int i;
     private int j;
 
-    public Move(String moveStr) {
-        moveStr = moveStr.replace(" ", "");
-        String[] tokens = moveStr.split(",");
-        this.i = Integer.parseInt(tokens[0]);
-        this.j = Integer.parseInt(tokens[1]);
-        //TODO Validar se a estrutura moveStr esta correta.
+    public Move(String moveStr) throws InvalidMoveException {
+        try {
+            moveStr = moveStr.replace(" ", "");
+            String[] tokens = moveStr.split(",");
+            this.i = Integer.parseInt(tokens[0]);
+            this.j = Integer.parseInt(tokens[1]);
+        } catch (Exception e) {
+            throw new InvalidMoveException("A jogada é invalida.\n Informe corretamente as posições do tabuleiro: x, y.");
+        }
     }
 
     public int getI() {
