@@ -21,6 +21,7 @@ public class Board {
 
     public void print() {
         for (int i = 0; i < matrix.length; i++) {
+            UI.printTextWithNoNewLine((i + 1) + " ");
             for (int j = 0; j < matrix[i].length; j++) {
                 UI.printTextWithNoNewLine(String.valueOf(matrix[i][j]));
                 if (j < matrix[i].length - 1) {
@@ -29,9 +30,10 @@ public class Board {
             }
             UI.printNewLine();
             if (i < matrix.length - 1) {
-                UI.printText("-----------");
+                UI.printText("   -----------");
             }
         }
+        UI.printText("    1   2   3 ");
     }
 
     public boolean isFull(){
@@ -45,11 +47,17 @@ public class Board {
         return true;
     }
 
-    public boolean play(Player player, Move move){
-        int i = move.getI();
-        int j = move.getJ();
+    public boolean play(Player player, Move move) throws InvalidMoveException{
+        int i = move.getI() - 1;
+        int j = move.getJ() - 1;
 
-        //TODO Validar os movimentos.
+        if (i < 0 || j < 0 || i >= Constantes.BOARD_SIZE || j > Constantes.BOARD_SIZE) {
+            throw new InvalidMoveException("O intervado da jogada é invalido!\nIntervalods permitidos de x: 1 a " + (Constantes.BOARD_SIZE) + " e y: 1 a " + (Constantes.BOARD_SIZE) + ".");
+        }
+
+        if (matrix[i][j] != ' ') {
+            throw new InvalidMoveException("Esta jogada já foi realizada!");
+        }
 
         matrix[i][j] = player.getSymbol();
 

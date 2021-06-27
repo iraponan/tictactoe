@@ -43,7 +43,7 @@ public class Player {
         return new Move(moveStr);
     }
 
-    public boolean play() throws  InvalidMoveException {
+    public boolean play() throws InvalidMoveException {
         Move move = inputMove();
         return board.play(this, move);
     }
