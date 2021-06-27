@@ -6,11 +6,15 @@ br/eti/inovareti/tictactoe/core/InvalidMoveException.java
  br.eti.inovareti.tictactoe.core.InvalidMoveException
 br/eti/inovareti/tictactoe/core/Move.java
  br.eti.inovareti.tictactoe.core.Move
-br/eti/inovareti/tictactoe/TicTacToe.java
- br.eti.inovareti.tictactoe.TicTacToe
-br/eti/inovareti/tictactoe/core/Game.java
- br.eti.inovareti.tictactoe.core.Game
 br/eti/inovareti/tictactoe/core/Player.java
  br.eti.inovareti.tictactoe.core.Player
 br/eti/inovareti/tictactoe/core/Board.java
  br.eti.inovareti.tictactoe.core.Board
+br/eti/inovareti/tictactoe/score/ScoreManager.java
+ br.eti.inovareti.tictactoe.score.ScoreManager
+br/eti/inovareti/tictactoe/score/FileScoreManager.java
+ br.eti.inovareti.tictactoe.score.FileScoreManager
+br/eti/inovareti/tictactoe/core/Game.java
+ br.eti.inovareti.tictactoe.core.Game
+br/eti/inovareti/tictactoe/TicTacToe.java
+ br.eti.inovareti.tictactoe.TicTacToe

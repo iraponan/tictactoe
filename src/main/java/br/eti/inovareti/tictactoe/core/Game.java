@@ -1,8 +1,11 @@
 package br.eti.inovareti.tictactoe.core;
 
 import br.eti.inovareti.tictactoe.Constantes;
+import br.eti.inovareti.tictactoe.score.FileScoreManager;
 import br.eti.inovareti.tictactoe.score.ScoreManager;
 import br.eti.inovareti.tictactoe.ui.UI;
+
+import java.io.IOException;
 
 public class Game {
 
@@ -11,7 +14,7 @@ public class Game {
     private int currentPlayerIndex = -1;
     private ScoreManager scoreManager;
 
-    public void play() {
+    public void play() throws IOException {
         scoreManager = createScoreManager();
 
         UI.printGameTitle();
@@ -65,7 +68,7 @@ public class Game {
         Integer score = scoreManager.getScore(player);
 
         if (score != null) {
-            UI.printText("O jogador '" + player.getName() + "' já possui " + score + "vitória(s)!");
+            UI.printText("O jogador '" + player.getName() + "' já possui " + score + " vitória(s)!");
         }
 
         UI.printText("O Jogador '" + name + "' vai usar o símbolo '" + symbol + "'.");
@@ -87,8 +90,7 @@ public class Game {
         return players[currentPlayerIndex];
     }
 
-    private ScoreManager createScoreManager() {
-        //TODO Retornar tipo correto
-        return null;
+    private ScoreManager createScoreManager() throws IOException {
+        return new FileScoreManager();
     }
 }
